@@ -1,4 +1,4 @@
-# 🎀 Barbie's Pet Care Adventure 🐾
+# **[🎀 Barbie's Pet Care Adventure 🐾](https://barbie-pet-game.netlify.app/)** *(Live Demo)*
 
 A fun web-based virtual pet care game with a Barbie theme!
 
