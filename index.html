@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbie's Pet Care Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>🎀 Barbie's Pet Care Adventure 🐾</h1>
+            <div class="score">Score: <span id="score">0</span></div>
+        </header>
+        
+        <main class="game-area">
+            <div class="pet-display">
+                <div class="pet" id="pet">
+                    <div class="pet-emoji">🐶</div>
+                    <div class="pet-name">Sparkle</div>
+                </div>
+            </div>
+            
+            <div class="stats-panel">
+                <div class="stat">
+                    <span class="stat-label">Hunger:</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" id="hunger-bar"></div>
+                    </div>
+                    <span id="hunger-value">100</span>%
+                </div>
+                
+                <div class="stat">
+                    <span class="stat-label">Happiness:</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" id="happiness-bar"></div>
+                    </div>
+                    <span id="happiness-value">100</span>%
+                </div>
+                
+                <div class="stat">
+                    <span class="stat-label">Cleanliness:</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" id="cleanliness-bar"></div>
+                    </div>
+                    <span id="cleanliness-value">100</span>%
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="action-btn feed-btn" onclick="feedPet()">🍖 Feed</button>
+                <button class="action-btn play-btn" onclick="playWithPet()">🎾 Play</button>
+                <button class="action-btn clean-btn" onclick="cleanPet()">🛁 Clean</button>
+                <button class="action-btn sleep-btn" onclick="petSleep()">😴 Sleep</button>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

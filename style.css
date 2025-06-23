@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff69b4, #ffc0cb, #ffb6c1);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 600px;
+    width: 90%;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #ff69b4;
+}
+
+header h1 {
+    color: #ff1493;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.score {
+    font-size: 1.2rem;
+    color: #ff69b4;
+    font-weight: bold;
+}
+
+.game-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pet-display {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(45deg, #ffe4e1, #ffd1dc);
+    border-radius: 15px;
+    border: 3px solid #ff69b4;
+}
+
+.pet {
+    display: inline-block;
+    animation: bounce 2s infinite;
+}
+
+.pet-emoji {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.pet-name {
+    font-size: 1.5rem;
+    color: #ff1493;
+    font-weight: bold;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.stats-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background: #fff0f5;
+    border-radius: 10px;
+    border: 2px solid #ffb6c1;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stat-label {
+    min-width: 100px;
+    font-weight: bold;
+    color: #ff1493;
+}
+
+.stat-bar {
+    flex: 1;
+    height: 20px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.stat-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff69b4, #ff1493);
+    transition: width 0.3s ease;
+    border-radius: 10px;
+}
+
+.action-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.action-btn {
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feed-btn {
+    background: linear-gradient(45deg, #ff6347, #ff4500);
+    color: white;
+}
+
+.play-btn {
+    background: linear-gradient(45deg, #32cd32, #228b22);
+    color: white;
+}
+
+.clean-btn {
+    background: linear-gradient(45deg, #87ceeb, #4682b4);
+    color: white;
+}
+
+.sleep-btn {
+    background: linear-gradient(45deg, #dda0dd, #9370db);
+    color: white;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.action-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .game-container {
+        padding: 15px;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .pet-emoji {
+        font-size: 3rem;
+    }
+    
+    .action-buttons {
+        grid-template-columns: 1fr;
+    }
+}
